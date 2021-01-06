@@ -9,6 +9,7 @@ _site
 vendor
 _notebooks/.ipynb_checkpoints
 .ipynb_checkpoints
+**/*.ipynb_checkpoints/
 # draft folder
 _drafts/
 # Local Netlify folder

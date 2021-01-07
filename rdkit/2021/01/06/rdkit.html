@@ -115,13 +115,10 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul class="section-nav">
-<li class="toc-entry toc-h2"><a href="#Setup">Setup </a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#Chem-vs.-AllChem">Chem vs. AllChem </a></li>
-</ul>
-</li>
+<li class="toc-entry toc-h2"><a href="#Setup">Setup </a></li>
 <li class="toc-entry toc-h2"><a href="#Basic">Basic </a>
 <ul>
+<li class="toc-entry toc-h3"><a href="#Chem-vs.-AllChem">Chem vs. AllChem </a></li>
 <li class="toc-entry toc-h3"><a href="#SMILES-Canonicalization">SMILES Canonicalization </a></li>
 <li class="toc-entry toc-h3"><a href="#Reading-sets-of-molecules">Reading sets of molecules </a></li>
 <li class="toc-entry toc-h3"><a href="#Draw-molecules-in-Jupter-environment">Draw molecules in Jupter environment </a></li>
@@ -158,7 +155,7 @@ window.onload = wrap_img;
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The <code>RDKit</code> pacakge only supports <code>conda</code> installation.</p>
-<div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">rdkit</span> <span class="n">rdkit</span> <span class="o">-</span><span class="n">y</span>
+<div class="highlight"><pre><span></span><span class="err">!</span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">rdkit</span> <span class="n">rdkit</span> <span class="o">-</span><span class="n">y</span>
 </pre></div>
 <p>Install Conda and RDKit in Google Colab:</p>
 <div class="highlight"><pre><span></span><span class="err">!</span><span class="n">wget</span> <span class="o">-</span><span class="n">c</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">repo</span><span class="o">.</span><span class="n">continuum</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">miniconda</span><span class="o">/</span><span class="n">Miniconda3</span><span class="o">-</span><span class="n">py37_4</span><span class="o">.</span><span class="mf">8.3</span><span class="o">-</span><span class="n">Linux</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">sh</span>
@@ -170,6 +167,15 @@ window.onload = wrap_img;
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">'/usr/local/lib/python3.7/site-packages/'</span><span class="p">)</span>
 </pre></div>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Basic">
+<a class="anchor" href="#Basic" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basic<a class="anchor-link" href="#Basic"> </a>
+</h2>
 </div>
 </div>
 </div>
@@ -225,15 +231,6 @@ window.onload = wrap_img;
 <p>If you find the Chem/AllChem thing annoying or confusing, you can use python’s “import … as …” syntax to remove the irritation:<code>python    from rdkit.Chem import AllChem as Chem</code></p>
 </blockquote>
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Basic">
-<a class="anchor" href="#Basic" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basic<a class="anchor-link" href="#Basic"> </a>
-</h2>
 </div>
 </div>
 </div>

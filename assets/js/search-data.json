@@ -30,8 +30,8 @@
 
   
       ,"page1": {
-          "title": "📟 Code Snippets",
-          "content": "ß .",
+          "title": "📓 Code Snippets",
+          "content": "A personal collection of reusable code snippets. . External Notebooks which are not written by me are marked with *. . Name Goal Colab . wandb* | Run hyperparameter sweep for Pytorch Lightning | | .",
           "url": "https://xinhaoli74.github.io/blog/code/",
           "relUrl": "/code/",
           "date": ""
@@ -53,7 +53,7 @@
 
   
       ,"page7": {
-          "title": "About Me",
+          "title": "㊙️ About Me",
           "content": "",
           "url": "https://xinhaoli74.github.io/blog/z_about/",
           "relUrl": "/z_about/",

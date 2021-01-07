@@ -1,6 +1,6 @@
 ---
 layout: page
 title: About Me
-permalink: /about/
+permalink: /z_about/
 ---
 

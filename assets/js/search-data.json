@@ -22,7 +22,7 @@
   
       ,"page1": {
           "title": "📓 Code Snippets",
-          "content": "A personal collection of reusable code snippets. . Tag Description Colab . rdkit | Generating Descriptors using RDKit | | . External Notebooks . |Tag|Authors|Description|Colab| |—|—|—|—| .",
+          "content": "A personal collection of reusable code snippets. . Tag Description Colab . rdkit | Generating Descriptors using RDKit | | .",
           "url": "https://xinhaoli74.github.io/blog/code/",
           "relUrl": "/code/",
           "date": ""

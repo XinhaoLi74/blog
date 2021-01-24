@@ -15,6 +15,17 @@
   
     
   
+    
+        ,"post3": {
+            "title": "Title",
+            "content": "&gt; Titile - toc: true - badges: true - comments: true - categories: [jupyter] # a list of tags - hide: true # change to false when ready to publish - search_exclude: true # change to false when ready to publish - image: images/chart-preview.png # put a cover image in the /images folder .",
+            "url": "https://xinhaoli74.github.io/blog/2020/01/01/template.html",
+            "relUrl": "/2020/01/01/template.html",
+            "date": " • Jan 1, 2020"
+        }
+        
+    
+  
 
   
   
@@ -33,6 +44,17 @@
   
 
   
+      ,"page3": {
+          "title": "📓 Reading",
+          "content": "A personal collection of articles/blogs/videos. . 2021-01 . ML and NLP Research Highlights of 2020 by SEBASTIAN RUDER. . AI in Drug Discovery 2020 - A Highly Opinionated Literature Review by Patrick Walters . MLOps Tutorial 1-6: a series of tutorial on Data Version Control (DVC) and Continuous Machine Learning (CML) .",
+          "url": "https://xinhaoli74.github.io/blog/reading/",
+          "relUrl": "/reading/",
+          "date": ""
+      }
+      
+  
+
+  
   
 
   
@@ -43,7 +65,7 @@
   
 
   
-      ,"page7": {
+      ,"page8": {
           "title": "㊙️ About Me",
           "content": "",
           "url": "https://xinhaoli74.github.io/blog/z_about/",
@@ -63,7 +85,7 @@
   
 
   
-      ,"page11": {
+      ,"page12": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://xinhaoli74.github.io/blog/robots.txt",

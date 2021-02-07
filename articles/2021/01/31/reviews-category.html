@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>ML in Cheminformatics (Reviews and Prospectives) | Towards Cheminformatics</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="ML in Cheminformatics (Reviews and Prospectives)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A collection of reviews and prospectives of ML in drug and materical discovery (Last Updated on 7 Feb 2021)" />
+<meta property="og:description" content="A collection of reviews and prospectives of ML in drug and materical discovery (Last Updated on 7 Feb 2021)" />
+<link rel="canonical" href="https://xinhaoli74.github.io/blog/articles/2021/01/31/reviews-category.html" />
+<meta property="og:url" content="https://xinhaoli74.github.io/blog/articles/2021/01/31/reviews-category.html" />
+<meta property="og:site_name" content="Towards Cheminformatics" />
+<meta property="og:image" content="https://xinhaoli74.github.io/blog/images/review-logo.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-01-31T00:00:00-06:00" />
+<script type="application/ld+json">
+{"url":"https://xinhaoli74.github.io/blog/articles/2021/01/31/reviews-category.html","@type":"BlogPosting","headline":"ML in Cheminformatics (Reviews and Prospectives)","dateModified":"2021-01-31T00:00:00-06:00","datePublished":"2021-01-31T00:00:00-06:00","image":"https://xinhaoli74.github.io/blog/images/review-logo.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://xinhaoli74.github.io/blog/articles/2021/01/31/reviews-category.html"},"description":"A collection of reviews and prospectives of ML in drug and materical discovery (Last Updated on 7 Feb 2021)","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://xinhaoli74.github.io/blog/feed.xml" title="Towards Cheminformatics" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">Towards Cheminformatics</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/code/">📓 Code Snippets</a><a class="page-link" href="/blog/reading/">📓 Reading</a><a class="page-link" href="/blog/search/">🔎 Search</a><a class="page-link" href="/blog/categories/">🔖 Tags</a><a class="page-link" href="/blog/z_about/">㊙️ About Me</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">ML in Cheminformatics (Reviews and Prospectives)</h1><p class="page-description">A collection of reviews and prospectives of ML in drug and materical discovery (Last Updated on 7 Feb 2021)</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-01-31T00:00:00-06:00" itemprop="datePublished">
+        Jan 31, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      4 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/blog/categories/#articles">articles</a>
+        
+      
+      </p>
+    
+
+    
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#General">General </a></li>
+<li class="toc-entry toc-h2"><a href="#Molecular-Representation">Molecular Representation </a></li>
+<li class="toc-entry toc-h2"><a href="#QSAR/Target-Prediction">QSAR/Target Prediction </a></li>
+<li class="toc-entry toc-h2"><a href="#Model-Interpretation/Uncertainty-Estimation">Model Interpretation/Uncertainty Estimation </a></li>
+<li class="toc-entry toc-h2"><a href="#Chemical-Reaction">Chemical Reaction </a></li>
+<li class="toc-entry toc-h2"><a href="#Molecular-modeling-and-simulation">Molecular modeling and simulation </a></li>
+<li class="toc-entry toc-h2"><a href="#Molecular-Generation/Chemical-Space">Molecular Generation/Chemical Space </a></li>
+<li class="toc-entry toc-h2"><a href="#Automation">Automation </a></li>
+<li class="toc-entry toc-h2"><a href="#Beyond-Chemistry">Beyond Chemistry </a></li>
+<li class="toc-entry toc-h2"><a href="#Reviews/Prospectives-in-Related-Fields">Reviews/Prospectives in Related Fields </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2021-01-31-reviews-category.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="General">
+<a class="anchor" href="#General" aria-hidden="true"><span class="octicon octicon-link"></span></a>General<a class="anchor-link" href="#General"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>
+<p>Data-Driven Strategies for Accelerated Materials Design (<a href="https://pubs.acs.org/doi/10.1021/acs.accounts.0c00785">Accounts of Chemical Rrsearch</a> 2021)</p>
+</li>
+<li>
+<p>Rethinking drug design in the artificial intelligence era (<a href="https://www.nature.com/articles/s41573-019-0050-3">Nature Reviews Drug Discovery</a> 2020)</p>
+</li>
+<li>
+<p>Chemists: AI Is Here; Unite To Get the Benefit (<a href="https://pubs.acs.org/doi/10.1021/acs.jmedchem.0c00163">J Med Chem</a> 2020)</p>
+</li>
+<li>
+<p>Drug discovery with explainable artificial intelligence (<a href="https://www.nature.com/articles/s42256-020-00236-4">Nature Machine Intelligence</a> 2020)</p>
+</li>
+<li>
+<p>Machine learning approaches to drug response prediction: challenges and recent progress (<a href="https://www.nature.com/articles/s41698-020-0122-1">Precision Oncology</a> 2020)</p>
+</li>
+<li>
+<p>Machine learning and AI-based approaches for bioactive ligand discovery and GPCR-ligand recognition (<a href="https://www.sciencedirect.com/science/article/pii/S1046202319302762">Methods</a> 2020)</p>
+</li>
+<li>
+<p>Towards reproducible computational drug discovery (<a href="https://jcheminf.biomedcentral.com/articles/10.1186/s13321-020-0408-x">J Cheminformatics</a> 2020)</p>
+</li>
+<li>
+<p>Current and Future Roles of Artificial Intelligence in Medicinal Chemistry Synthesis (<a href="https://pubs.acs.org/doi/abs/10.1021/acs.jmedchem.9b02120">J Med Chem</a> 2020)</p>
+</li>
+<li>
+<p>Drug Research Meets Network Science: Where Are We? (<a href="https://pubs.acs.org/doi/10.1021/acs.jmedchem.9b01989">J Med Chem</a> 2020)</p>
+</li>
+<li>
+<p>Chemist versus Machine: Traditional Knowledge versus Machine Learning Techniques (<a href="https://www.cell.com/trends/chemistry/fulltext/S2589-5974(20">Trends in Chemistry</a>30265-3) 2020)</p>
+</li>
+<li>
+<p>Current Trends, Overlooked Issues, and Unmet Challenges in Virtual Screening (<a href="https://pubs.acs.org/doi/10.1021/acs.jcim.9b01101">JCIM</a> 2020)</p>
+</li>
+<li>
+<p>What Will Computational Modeling Approaches Have to Say in the Era of Atomistic Cryo-EM Data? (<a href="https://pubs.acs.org/doi/10.1021/acs.jcim.0c00123">JCIM</a> 2020)</p>
+</li>
+<li>
+<p>Deep Learning in Chemistry (<a href="https://pubs.acs.org/doi/10.1021/acs.jcim.9b00266">JCIM</a> 2019)</p>
+</li>
+<li>
+<p>Deep learning in drug discovery: opportunities, challenges and future prospects (<a href="https://www.sciencedirect.com/science/article/abs/pii/S135964461930282X">Drug Discovery Today</a> 2019)</p>
+</li>
+<li>
+<p>Recent applications of deep learning and machine intelligence on in silico drug discovery: methods, tools and databases (<a href="https://academic.oup.com/bib/article/20/5/1878/5062947">Briefings in Bioinformatics</a> 2019)</p>
+</li>
+<li>
+<p>Practical considerations for active machine learning in drug discovery (<a href="https://www.sciencedirect.com/science/article/abs/pii/S1740674920300019">Drug Discovery Today</a> 2019)</p>
+</li>
+<li>
+<p>Concepts of Artificial Intelligence for Computer-Assisted Drug Discovery (<a href="https://pubs.acs.org/doi/10.1021/acs.chemrev.8b00728">Chemical Review</a> 2019)</p>
+</li>
+<li>
+<p>Machine learning in chemoinformatics and drug discovery (<a href="https://www.sciencedirect.com/science/article/pii/S1359644617304695">Drug Discovery Today</a> 2018)</p>
+</li>
+<li>
+<p>The rise of deep learning in drug discovery (<a href="https://www.sciencedirect.com/science/article/pii/S1359644617303598">Drug Discovery Today</a> 2018)</p>
+</li>
+<li>
+<p>Deep learning for computational chemistry (<a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/jcc.24764">J Comp Chem</a> 2017)</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Molecular-Representation">
+<a class="anchor" href="#Molecular-Representation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Molecular Representation<a class="anchor-link" href="#Molecular-Representation"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>
+<p>Molecular representations in AI-driven drug discovery: a review and practical guide (<a href="https://jcheminf.biomedcentral.com/articles/10.1186/s13321-020-00460-5">J Cheminformatics</a> 2020）</p>
+</li>
+<li>
+<p>Cheminformatics in Natural Product-Based Drug Discovery (<a href="https://onlinelibrary.wiley.com/doi/full/10.1002/minf.202000171">Molecular Informatics</a> 2020)</p>
+</li>
+<li>
+<p>Exploring chemical space using natural language processing methodologies for drug discovery (<a href="https://www.sciencedirect.com/science/article/abs/pii/S1359644620300465">Drug Discovery Today</a> 2020)</p>
+</li>
+<li>
+<p>Molecular Representation: Going Long on Fingerprints (<a href="https://www.cell.com/chem/fulltext/S2451-9294(20">Chem</a>30198-4) 2020)</p>
+</li>
+<li>
+<p>Learning Molecular Representations for Medicinal Chemistry (<a href="https://pubs.acs.org/doi/10.1021/acs.jmedchem.0c00385">J Med Chem</a> 2020)</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="QSAR/Target-Prediction">
+<a class="anchor" href="#QSAR/Target-Prediction" aria-hidden="true"><span class="octicon octicon-link"></span></a>QSAR/Target Prediction<a class="anchor-link" href="#QSAR/Target-Prediction"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>
+<p>QSAR without borders. (<a href="https://pubs.rsc.org/en/content/articlelanding/2020/cs/d0cs00098a#!divAbstract">Chemical Society Reviews</a> 2020)</p>
+</li>
+<li>
+<p>A compact review of molecular property prediction with graph neural networks (<a href="https://www.sciencedirect.com/science/article/pii/S1740674920300305">Drug Discovery Today</a> 2020)</p>
+</li>
+<li>
+<p>Transfer Learning for Drug Discovery (<a href="https://pubs.acs.org/doi/abs/10.1021/acs.jmedchem.9b02147">J Med Chem</a> 2020)</p>
+</li>
+<li>
+<p>Advances in exploring activity cliffs (<a href="https://link.springer.com/article/10.1007/s10822-020-00315-z">J Computer-Aided Molecular Design</a> 2020)</p>
+</li>
+<li>
+<p>Molecular property prediction: recent trends in the era of artificial intelligence (<a href="https://www.sciencedirect.com/science/article/abs/pii/S1740674920300032?via%3Dihub">Drug Discovery Today</a> 2019)</p>
+</li>
+<li>
+<p>Drug repurposing: a promising tool to accelerate the drug discovery process (<a href="https://www.sciencedirect.com/science/article/abs/pii/S1359644618302599?via%3Dihub">Drug Discovery Today</a> 2019)</p>
+</li>
+<li>
+<p>Advances and Challenges in Computational Target Prediction (<a href="https://pubs.acs.org/doi/10.1021/acs.jcim.8b00832">JCIM</a> 2019)</p>
+</li>
+<li>
+<p>ADMET modeling approaches in drug discovery (<a href="https://www.sciencedirect.com/science/article/abs/pii/S1359644618303301">Drug Discovery Today</a> 2019)</p>
+</li>
+<li>
+<p>A Survey of Multi‐task Learning Methods in Chemoinformatics (<a href="https://onlinelibrary.wiley.com/doi/full/10.1002/minf.201800108">Mol Informatics</a> 2018)</p>
+</li>
+<li>
+<p>Transfer and Multi-task Learning in QSAR Modeling: Advances and Challenges (<a href="https://www.frontiersin.org/articles/10.3389/fphar.2018.00074/full">Frontiers in Pharmacology</a> 2018)</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Model-Interpretation/Uncertainty-Estimation">
+<a class="anchor" href="#Model-Interpretation/Uncertainty-Estimation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Model Interpretation/Uncertainty Estimation<a class="anchor-link" href="#Model-Interpretation/Uncertainty-Estimation"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>
+<p>Uncertainty quantification in drug design (<a href="https://www.sciencedirect.com/science/article/abs/pii/S1359644620305110?via%3Dihub">Drug Discovery Today</a> 2020)</p>
+</li>
+<li>
+<p>Predicting With Confidence: Using Conformal Prediction in Drug Discovery (<a href="https://jpharmsci.org/article/S0022-3549(20">J Pham Sci</a>30589-X/fulltext) 2020)</p>
+</li>
+<li>
+<p>Interpretable Deep Learning in Drug Discovery (<a href="https://arxiv.org/abs/1903.02788">Preprint</a> 2019)</p>
+</li>
+<li>
+<p>Concepts and Applications of Conformal Prediction in Computational Drug Discovery (<a href="https://arxiv.org/abs/1908.03569">Preprint</a> 2019)</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Chemical-Reaction">
+<a class="anchor" href="#Chemical-Reaction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Chemical Reaction<a class="anchor-link" href="#Chemical-Reaction"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Machine Learning in Computer-Aided Synthesis Planning (<a href="https://pubs.acs.org/doi/10.1021/acs.accounts.8b00087">Accounts of Chemical Research</a> 2018)</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Molecular-modeling-and-simulation">
+<a class="anchor" href="#Molecular-modeling-and-simulation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Molecular modeling and simulation<a class="anchor-link" href="#Molecular-modeling-and-simulation"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>
+<p>Machine learning approaches for analyzing and enhancing molecular dynamics simulations (<a href="https://www.sciencedirect.com/science/article/abs/pii/S0959440X19301551">Current Opinion in Structural Biology</a> 2020)</p>
+</li>
+<li>
+<p>Advances of machine learning in molecular modeling and simulation (<a href="https://www.sciencedirect.com/science/article/abs/pii/S2211339818300832">Current Opinion in Chemical Engineering</a> 2019)</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Molecular-Generation/Chemical-Space">
+<a class="anchor" href="#Molecular-Generation/Chemical-Space" aria-hidden="true"><span class="octicon octicon-link"></span></a>Molecular Generation/Chemical Space<a class="anchor-link" href="#Molecular-Generation/Chemical-Space"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>
+<p>Defining and Exploring Chemical Spaces (<a href="https://doi.org/10.1016/j.trechm.2020.11.004">Trends in Chemistry</a> 2020)</p>
+</li>
+<li>
+<p>Deep Learning and Knowledge-Based Methods for Computer Aided Molecular Design -- Toward a Unified Approach: State-of-the-Art and Future Directions (<a href="https://www.sciencedirect.com/science/article/abs/pii/S0098135420304476">Computers &amp; Chemical Engineering</a> 2020)</p>
+</li>
+<li>
+<p>Virtual Compound Libraries in Computer-Assisted Drug Discovery (<a href="https://pubs.acs.org/doi/10.1021/acs.jcim.8b00737">JCIM</a> 2019)</p>
+</li>
+<li>
+<p>How to explore chemical space using algorithms and automation (<a href="https://www.nature.com/articles/s41570-018-0066-y">Nature Reviews Chemistry</a> 2019)</p>
+</li>
+<li>
+<p>Deep learning for molecular design—a review of the state of the art (<a href="https://pubs.rsc.org/en/content/articlelanding/2019/me/c9me00039a#!divAbstract">Mol Systems Design &amp; Engineering</a> 2019)</p>
+</li>
+<li>
+<p>Deep generative models for molecular science (<a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/minf.201700133">Mol Informatics</a> 2018)</p>
+</li>
+<li>
+<p>Conformation Generation: The State of the Art (<a href="https://pubs.acs.org/doi/10.1021/acs.jcim.7b00221">JCIM</a> 2017)</p>
+</li>
+<li>
+<p>Recent Advances in Scaffold Hopping (<a href="https://pubs.acs.org/doi/10.1021/acs.jmedchem.6b01437">J Med Chem</a> 2017)</p>
+</li>
+<li>
+<p>Active-learning strategies in computer-assisted drug discovery (<a href="https://www.sciencedirect.com/science/article/abs/pii/S1359644614004735?via%3Dihub">Drug Discovery Today</a> 2015)</p>
+</li>
+<li>
+<p>The quest for novel chemical matter and the contribution of computer-aided de novo design (<a href="https://www.tandfonline.com/doi/abs/10.1517/17460441.2011.554394?journalCode=iedc20">Expert Opinion on Drug Discovery</a> 2011)</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Automation">
+<a class="anchor" href="#Automation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Automation<a class="anchor-link" href="#Automation"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>
+<p>Autonomous Discovery in the Chemical Sciences Part I: Progress (<a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/anie.201909987">Angewandte Chemie</a> 2019)</p>
+</li>
+<li>
+<p>Autonomous Discovery in the Chemical Sciences Part II: Outlook (<a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/anie.201909989">Angewandte Chemie</a> 2019)</p>
+</li>
+<li>
+<p>Automating drug discovery (<a href="https://www.nature.com/articles/nrd.2017.232">Nature Reviews Drug Discovery</a> 2017)</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Beyond-Chemistry">
+<a class="anchor" href="#Beyond-Chemistry" aria-hidden="true"><span class="octicon octicon-link"></span></a>Beyond Chemistry<a class="anchor-link" href="#Beyond-Chemistry"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>
+<p>Deep Learning in Mining Biological Data (<a href="https://link.springer.com/article/10.1007/s12559-020-09773-x">Cognitive Computation</a> 2021)</p>
+</li>
+<li>
+<p>Informatics for Chemistry, Biology, and Biomedical Sciences (<a href="https://pubs.acs.org/doi/10.1021/acs.jcim.0c01301">JCIM</a> 2021)</p>
+</li>
+<li>
+<p>A review of optical chemical structure recognition tools (<a href="https://jcheminf.biomedcentral.com/articles/10.1186/s13321-020-00465-0">J Cheminformatics</a> 2020)</p>
+</li>
+<li>
+<p>Deep Learning in Protein Structural Modeling and Design (<a href="https://arxiv.org/abs/2007.08383">Preprint</a> 2020)</p>
+</li>
+<li>
+<p>Deep learning: new computational modelling techniques for genomics (<a href="https://www.nature.com/articles/s41576-019-0122-6">Nature Reviews Genetics</a> 2019)</p>
+</li>
+<li>
+<p>Proteochemometrics – recent developments in bioactivity and selectivity modeling (<a href="https://www.sciencedirect.com/science/article/pii/S1740674920300111">Drug Discovery Today</a> 2019)</p>
+</li>
+<li>
+<p>Opportunities and obstacles for deep learning in biology and medicine (<a href="https://royalsocietypublishing.org/doi/10.1098/rsif.2017.0387">J Royal Society Interface</a> 2018)</p>
+</li>
+<li>
+<p>Deep Learning in Biomedical Data Science (<a href="https://www.annualreviews.org/doi/abs/10.1146/annurev-biodatasci-080917-013343">Annual Reviews</a> 2018)</p>
+</li>
+<li>
+<p>Deep learning for computational biology (<a href="https://www.embopress.org/doi/full/10.15252/msb.20156651">Molecular Syntems Biology</a> 2016)</p>
+</li>
+<li>
+<p>Polypharmacology modelling using proteochemometrics (PCM): recent methodological developments, applications to target families, and future prospects (<a href="https://pubs.rsc.org/en/content/articlehtml/2015/md/c4md00216d">MedChemComm</a> 2015)</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Reviews/Prospectives-in-Related-Fields">
+<a class="anchor" href="#Reviews/Prospectives-in-Related-Fields" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reviews/Prospectives in Related Fields<a class="anchor-link" href="#Reviews/Prospectives-in-Related-Fields"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>
+<p>Machine Learning on Graphs: A Model and Comprehensive Taxonomy</p>
+</li>
+<li>
+<p>Generalizing from a Few Examples: A Survey on Few-Shot Learning</p>
+</li>
+<li>
+<p>Meta-Learning in Neural Networks: A Survey</p>
+</li>
+<li>
+<p>Explainable Deep Learning:A Field Guide for the Uninitiated</p>
+</li>
+<li>
+<p>Pre-trained Models for Natural Language Processing: A Survey</p>
+</li>
+<li>
+<p>Machine Learning in Python: Main developments and technology trends in data science, machine learning, and artificial intelligence</p>
+</li>
+<li>
+<p>A Gentle Introduction to Deep Learning for Graphs</p>
+</li>
+<li>
+<p>A Survey on Multi-Task Learning</p>
+</li>
+<li>
+<p>Automated Machine Learning: State-of-The-Art and Open Challenges</p>
+</li>
+<li>
+<p>A Comprehensive Survey on Graph Neural Networks</p>
+</li>
+<li>
+<p>On the Robustness of Interpretability Methods</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="XinhaoLi74/blog"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/blog/articles/2021/01/31/reviews-category.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p></p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/XinhaoLi74" title="XinhaoLi74"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/XinhaoLi1" title="XinhaoLi1"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

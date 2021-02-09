@@ -46,17 +46,6 @@
   
 
   
-      ,"page3": {
-          "title": "📓 Reading",
-          "content": "A personal collection of articles/blogs/videos. . 2021-01 . ML and NLP Research Highlights of 2020 by SEBASTIAN RUDER. . | AI in Drug Discovery 2020 - A Highly Opinionated Literature Review by Patrick Walters . | MLOps Tutorial 1-6: a series of tutorial on Data Version Control (DVC) and Continuous Machine Learning (CML) . youtube: https://www.youtube.com/watch?v=9BgIDqAzfuA&amp;t=798s . | .",
-          "url": "https://xinhaoli74.github.io/blog/reading/",
-          "relUrl": "/reading/",
-          "date": ""
-      }
-      
-  
-
-  
   
 
   
@@ -67,7 +56,7 @@
   
 
   
-      ,"page8": {
+      ,"page7": {
           "title": "㊙️ About Me",
           "content": "I like to write about basic cheminformatics concepts and play with different ML/DL algorithms and cheminformatics tools. You could connect with me on LinkedIn and Twitter. .",
           "url": "https://xinhaoli74.github.io/blog/z_about/",
@@ -87,7 +76,7 @@
   
 
   
-      ,"page12": {
+      ,"page11": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://xinhaoli74.github.io/blog/robots.txt",

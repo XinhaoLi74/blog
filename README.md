@@ -8,6 +8,11 @@ https://XinhaoLi74.github.io/blog/
 
 # My Blog
 
+add website logo to the main page: in the 'index.html', add 
+
+```
+![]({{site.baseurl}}/images/logo.png)
+```
 
 _powered by [fastpages](https://github.com/fastai/fastpages)_
 
